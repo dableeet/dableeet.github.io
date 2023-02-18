@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script defer src="./index.js"></script>
+    <title>Транслит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="logo">t.r.a.n.s.l.i.t.</h1>
+    <div class="mainInput">
+      <input class="input" placeholder="Начните вводить текст" />
+      <button class="add">Добавить</button>
+    </div>
+    <div class="library">
+      <table>
+        <tr class="tableRow">
+          <td class="noTranslit data">
+            <span class="noTranslitWord">Привет &#128075;&#127995;</span>
+          </td>
+          <td class="translit data">
+            <span class="translitWord">Privet</span>
+            <button class="clear">
+              <span
+                class="material-icons"
+                style="font-size: 14px; color: white"
+              >
+                clear
+              </span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button class="clearAll">
+      <span class="clear"
+        ><span class="material-icons" style="font-size: 18px; color: white">
+          clear
+        </span></span
+      ><span>Очистить всё</span>
+    </button>
+  </body>
+</html>
