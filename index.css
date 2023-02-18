@@ -194,4 +194,10 @@ table tr td:first-child:before {
     padding-left: 16px;
     padding-right: 8px;
   }
+
+  .splitWord:hover:before,
+  .splitWord:active:before {
+    visibility: visible;
+    opacity: 1;
+  }
 }
