@@ -151,7 +151,7 @@ table tr td:first-child:before {
   content: attr(wordAll);
   bottom: 25px;
   font-size: 16px;
-
+  left: -20px;
   padding: 10px 16px;
   color: rgb(0, 0, 0);
   border: 1px solid black;
@@ -162,14 +162,6 @@ table tr td:first-child:before {
   visibility: hidden;
   cursor: default;
   box-shadow: 2px 2px #0000009b;
-}
-
-.w1:before {
-  margin-left: 27.5px;
-}
-
-.w2:before {
-  margin-left: -17px;
 }
 
 .splitWord:hover:before {
