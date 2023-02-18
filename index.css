@@ -195,7 +195,6 @@ table tr td:first-child:before {
     padding-right: 8px;
   }
 
-  .splitWord:hover:before,
   .splitWord:active:before {
     visibility: visible;
     opacity: 1;
