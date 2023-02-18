@@ -50,6 +50,7 @@ body {
   border: 1px solid black;
   cursor: pointer;
   align-self: center;
+  text-align: center;
 }
 
 .add:active,
