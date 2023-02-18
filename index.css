@@ -75,7 +75,7 @@ table {
   counter-reset: tableCount;
 }
 
-table tr td:first-child:before {
+table tr td:first-child::before {
   position: relative;
   counter-increment: tableCount;
   content: counter(tableCount);
@@ -146,7 +146,7 @@ table tr td:first-child:before {
   position: relative;
 }
 
-.splitWord:before {
+.splitWord::before {
   display: block;
   position: absolute;
   content: attr(wordAll);
@@ -165,8 +165,8 @@ table tr td:first-child:before {
   box-shadow: 2px 2px #0000009b;
 }
 
-.splitWord:hover:before,
-.splitWord:active:before {
+.splitWord:hover::before,
+.splitWord:active::before {
   visibility: visible;
   opacity: 1;
 }
