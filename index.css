@@ -165,7 +165,8 @@ table tr td:first-child:before {
   box-shadow: 2px 2px #0000009b;
 }
 
-.splitWord:hover:before {
+.splitWord:hover:before,
+.splitWord:active:before {
   visibility: visible;
   opacity: 1;
 }
@@ -193,10 +194,5 @@ table tr td:first-child:before {
   .translit {
     padding-left: 16px;
     padding-right: 8px;
-  }
-
-  .splitWord:active:before {
-    visibility: visible;
-    opacity: 1;
   }
 }
