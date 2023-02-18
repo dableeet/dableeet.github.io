@@ -88,11 +88,11 @@ const createNewRow = () => {
 
   if (noTranslitWord.length >= 7) {
     noTranslit.style.cursor = 'pointer';
-    noTranslit.classList.add('splitWord', 'w1');
+    noTranslit.classList.add('splitWord');
     noTranslit.setAttribute('wordAll', noTranslitWord);
 
     translitWord.style.cursor = 'pointer';
-    translitWord.classList.add('splitWord', 'w2');
+    translitWord.classList.add('splitWord');
     translitWord.setAttribute('wordAll', translit(noTranslitWord));
 
     noTranslitWord = noTranslitWord.slice(0, 7) + '...';
