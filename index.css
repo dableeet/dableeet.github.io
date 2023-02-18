@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: rgb(69, 32, 171);
+  font-size: 40px;
+  margin-bottom: 86px;
+}
+
+.mainInput {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  border: 2px solid black;
+  width: 500px;
+  min-height: 56px;
+  border-radius: 14px;
+  padding: 0 10px;
+}
+
+.input {
+  width: 75%;
+  font-size: 100%;
+  outline: none;
+  border: none;
+}
+
+.input::placeholder {
+  font-size: 100%;
+}
+
+.add {
+  font-size: 18px;
+  height: 38px;
+  width: 107px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid black;
+  cursor: pointer;
+  align-self: center;
+}
+
+.add:active,
+.clearAll:active {
+  transform: scale(0.98);
+}
+
+.library {
+  display: flex;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    rgba(240, 240, 240, 1) 50%,
+    rgba(0, 0, 0, 0.271) 50%
+  );
+  position: relative;
+  margin-bottom: 60px;
+}
+
+table {
+  border-collapse: collapse;
+  counter-reset: tableCount;
+}
+
+table tr td:first-child:before {
+  position: relative;
+  counter-increment: tableCount;
+  content: counter(tableCount);
+  color: #000000;
+  font-size: 14px;
+  margin-right: 15px;
+  margin-left: 12px;
+  cursor: default;
+}
+
+.data {
+  min-width: 250px;
+  height: 40px;
+  cursor: default;
+}
+
+.noTranslit {
+  border-right: 1px solid black;
+}
+
+.translit {
+  border-left: 1px solid black;
+  padding-left: 28px;
+  padding-right: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  cursor: pointer;
+  background-color: #747474;
+  border: 1px solid #747474;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translit .clear:hover {
+  transform: scale(1.1);
+}
+
+.clearAll .clear {
+  width: 24px;
+  height: 24px;
+}
+
+.clearAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 176px;
+  min-height: 38px;
+  background-color: #74747497;
+  border: #747474;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000000;
+  font-size: 18px;
+  gap: 5px;
+  margin-bottom: 100px;
+}
+
+.splitWord {
+  position: relative;
+}
+
+.splitWord:before {
+  display: block;
+  position: absolute;
+  content: attr(wordAll);
+  bottom: 25px;
+  font-size: 16px;
+
+  padding: 10px 16px;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+  box-shadow: 2px 2px #0000009b;
+}
+
+.w1:before {
+  margin-left: 27.5px;
+}
+
+.w2:before {
+  margin-left: -17px;
+}
+
+.splitWord:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 9vw;
+    margin-bottom: 76px;
+  }
+
+  .mainInput {
+    margin-bottom: 60px;
+    width: 90vw;
+    min-height: 56px;
+  }
+
+  .library {
+    margin-bottom: 50px;
+  }
+
+  .data {
+    min-width: 45vw;
+  }
+
+  .translit {
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+}
