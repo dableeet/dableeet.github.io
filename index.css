@@ -75,7 +75,7 @@ table {
   counter-reset: tableCount;
 }
 
-table tr td:first-child::before {
+table tr td:first-child:before {
   position: relative;
   counter-increment: tableCount;
   content: counter(tableCount);
@@ -146,7 +146,7 @@ table tr td:first-child::before {
   position: relative;
 }
 
-.splitWord::before {
+.splitWord:before {
   display: block;
   position: absolute;
   content: attr(wordAll);
@@ -165,8 +165,7 @@ table tr td:first-child::before {
   box-shadow: 2px 2px #0000009b;
 }
 
-.splitWord:hover::before,
-.splitWord:active::before {
+.splitWord:hover:before {
   visibility: visible;
   opacity: 1;
 }
@@ -185,14 +184,55 @@ table tr td:first-child::before {
 
   .library {
     margin-bottom: 50px;
+    background: linear-gradient(
+      to bottom,
+      rgba(240, 240, 240, 1) 50%,
+      rgba(0, 0, 0, 0.271) 50%
+    );
   }
 
   .data {
-    min-width: 45vw;
+    min-width: 90vw;
+    max-width: 90vw;
   }
 
   .translit {
-    padding-left: 16px;
-    padding-right: 8px;
+    display: none;
+  }
+
+  .noTranslit,
+  .mobileTranslit {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .noTranslit .noTranslitWord,
+  .mobileTranslit .mobileTranslitWord {
+    min-width: 80%;
+    max-width: 80%;
+  }
+
+  .data .clear {
+    margin-right: 10px;
+  }
+
+  .data .clear:hover {
+    transform: scale(1.1);
+  }
+
+  .tableRow,
+  .tableRow2 {
+    counter-reset: tableCount;
+  }
+
+  .tableRow2 {
+    border-top: 2px solid black;
+  }
+
+  .tableRow1,
+  .tableRow2\.1 {
+    border-top: 1px solid black;
   }
 }
